@@ -26,11 +26,14 @@
 import './App.css';
 import { useRoutes } from 'react-router';
 import routes from './router';
+import DefaultLayout from './layout/default';
 
 function App() {
   return (
     <div className="App">
-      {useRoutes(routes)}
+      <DefaultLayout>
+        {useRoutes(routes)}
+      </DefaultLayout>
     </div>
   );
 }
